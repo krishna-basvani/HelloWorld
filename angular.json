@@ -88,9 +88,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_moudles/ngf-bootstrap/dist/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_moudles/jquery/dist/jquery.min.js",
+              "node_moudles/bootstrap/dist/js/bootstrap.js"
+            ]
           }
         },
         "lint": {
