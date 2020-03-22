@@ -6,7 +6,8 @@ import {  Component} from "@angular/core";
     <div>
         <h1>Upcoming Angular Events!</h1>
         <hr/>
-        <event-thumbnail (eventClick)="eventClickedHandler($event)" [event]="event1"></event-thumbnail>
+        <event-thumbnail #thumbnail [event]="event1"></event-thumbnail>
+        <button class="btn btn-primary" (click)="thumbnail.logFoo()">Log me some foo</button>
     </div>
     `
 })
@@ -19,10 +20,5 @@ export class EventListComponent{
         time: '8am',
         price:100, 
         location: {address: '123 Main St', city: 'Salt Lake City, UT', country: 'USA'}
-    }
-
-    eventClickedHandler(data)
-    {
-        console.log("received :" + data)
     }
 };
